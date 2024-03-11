@@ -1,0 +1,55 @@
+{
+	"name": "remark-custom-header-id",
+	"version": "0.0.0",
+	"description": "Remark plugin for adding custom ID attribute to Markdown headers",
+	"license": "MIT",
+	"repository": "sindresorhus/remark-custom-header-id",
+	"funding": "https://github.com/sponsors/sindresorhus",
+	"author": {
+		"name": "Sindre Sorhus",
+		"email": "sindresorhus@gmail.com",
+		"url": "https://sindresorhus.com"
+	},
+	"type": "module",
+	"exports": {
+		"types": "./index.d.ts",
+		"default": "./index.js"
+	},
+	"sideEffects": false,
+	"engines": {
+		"node": ">=18"
+	},
+	"scripts": {
+		"test": "xo && ava && tsc index.d.ts"
+	},
+	"files": [
+		"index.js",
+		"index.d.ts"
+	],
+	"keywords": [
+		"remark",
+		"remark-plugin",
+		"markdown",
+		"header",
+		"heading",
+		"unified",
+		"plugin",
+		"html",
+		"id",
+		"attribute",
+		"astro"
+	],
+	"dependencies": {
+		"@types/unist": "^3.0.2",
+		"unist-util-visit": "^5.0.0"
+	},
+	"devDependencies": {
+		"ava": "^6.1.2",
+		"rehype-stringify": "^10.0.0",
+		"remark-parse": "^11.0.0",
+		"remark-rehype": "^11.1.0",
+		"typescript": "^5.4.2",
+		"unified": "^11.0.4",
+		"xo": "^0.58.0"
+	}
+}
