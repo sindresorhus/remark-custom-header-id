@@ -1,6 +1,6 @@
 {
 	"name": "remark-custom-header-id",
-	"version": "0.0.0",
+	"version": "0.1.0",
 	"description": "Remark plugin for adding custom ID attribute to Markdown headers",
 	"license": "MIT",
 	"repository": "sindresorhus/remark-custom-header-id",
