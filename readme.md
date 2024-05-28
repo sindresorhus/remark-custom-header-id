@@ -49,7 +49,7 @@ export default defineConfig({
 
 ### Alternative syntax for MDX files
 
-The syntax `## Some header {#custom-id}` don't work inside MDX files.
+The `{#custom-id}` notation does not work in [MDX](https://mdxjs.com) files because MDX treats `{}` as JSX syntax, causing a parsing error. 
 
 You can use one of these alternatives:
 
@@ -58,10 +58,8 @@ You can use one of these alternatives:
 
 Examples:
 
-`## Some header \{#custom-id\}`
-
-`## Some header ||custom-id||`
-
+- `## Some header \{#custom-id\}`
+- `## Some header ||custom-id||`
 
 ## API
 
