@@ -1,5 +1,6 @@
 import {visit, SKIP} from 'unist-util-visit';
 
+// TODO: Use the same identifier for both when it's possible: https://github.com/tc39/proposal-duplicate-named-capturing-groups
 const idRegex = / {#(?<id1>[^}]+)}$| \|\|(?<id2>[^|]+)\|\|$/;
 
 export default function remarkCustomHeaderId() {
@@ -20,7 +21,7 @@ export default function remarkCustomHeaderId() {
 			textNode.value = text.slice(0, matched.index);
 
 			const {id1, id2} = matched.groups;
-			const id = id1 || id2;
+			const id = id1 ?? id2;
 			node.data ??= {};
 			node.data.id = id;
 			node.data.hProperties ??= {};
