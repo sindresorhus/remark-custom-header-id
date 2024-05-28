@@ -1,6 +1,6 @@
 import {visit, SKIP} from 'unist-util-visit';
 
-const idRegex = / (?:{#|\|\|)(?<id>[^}]+)(?:}|\|\|)$/;
+const idRegex = / {#(?<id1>[^}]+)}$| \|\|(?<id2>[^|]+)\|\|$/;
 
 export default function remarkCustomHeaderId() {
 	return function (node) {
@@ -19,7 +19,8 @@ export default function remarkCustomHeaderId() {
 
 			textNode.value = text.slice(0, matched.index);
 
-			const {id} = matched.groups;
+			const {id1, id2} = matched.groups;
+			const id = id1 || id2;
 			node.data ??= {};
 			node.data.id = id;
 			node.data.hProperties ??= {};
