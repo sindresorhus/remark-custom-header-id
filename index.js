@@ -1,6 +1,6 @@
 import {visit, SKIP} from 'unist-util-visit';
 
-const idRegex = / {#(?<id>[^}]+)}$/;
+const idRegex = / (?:{#|\|\|)(?<id>[^}]+)(?:}|\|\|)$/;
 
 export default function remarkCustomHeaderId() {
 	return function (node) {

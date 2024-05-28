@@ -47,6 +47,22 @@ export default defineConfig({
 });
 ```
 
+### Alternative syntax for MDX files
+
+The syntax `## Some header {#custom-id}` don't work inside MDX files.
+
+You can use one of these alternatives:
+
+- Escape curly braces: `\{#custom-id\}`
+- Use this syntax: `||custom-id||`
+
+Examples:
+
+`## Some header \{#custom-id\}`
+
+`## Some header ||custom-id||`
+
+
 ## API
 
 ### remarkCustomHeaderId()

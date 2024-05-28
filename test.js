@@ -16,12 +16,18 @@ test('main', async t => {
 # a {#aa}
 # b
 ## c {#foo bar}
+# unicorn ||foo-bar||
+# a ||aa||
+## c ||foo bar||
 	`.trim());
 
 	t.is(file.value, `
 <h1 id="foo-bar">unicorn</h1>
 <h1 id="aa">a</h1>
 <h1>b</h1>
+<h2 id="foo bar">c</h2>
+<h1 id="foo-bar">unicorn</h1>
+<h1 id="aa">a</h1>
 <h2 id="foo bar">c</h2>
 `.trim());
 });
