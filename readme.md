@@ -1,6 +1,6 @@
 # remark-custom-header-id
 
-> [Remark](https://github.com/remarkjs/remark) plugin for adding custom ID attribute to Markdown headers
+> [Remark](https://github.com/remarkjs/remark) plugin for adding a custom ID attribute to Markdown headers
 
 This allows for stable and more meaningful anchor links in your generated HTML.
 
